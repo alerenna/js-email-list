@@ -1,5 +1,8 @@
 //Select the DOM nodes
 const listEl = document.querySelector('.email-list')
+const buttonEL = document.querySelector('.btn')
+
+
 
 //Inizializzo la lista dove caricare le 10 mail
 let listMail = []
@@ -30,6 +33,21 @@ function randomEmailDom() {
 for (let i = 1; i <= 10; i++) {
     randomEmailDom()
 }
+
+//Bottone per generare altre 10 mail
+buttonEL.addEventListener('click', function(){
+    //AL CLICK
+    //Svuoto array mail
+    listMail.length = 0; 
+    //Svuoto il DOM della lista
+    listEl.innerHTML = ''
+    //richiamo ciclo con funzione genera mail
+    for (let i = 1; i <= 10; i++) {
+        randomEmailDom()
+    }
+})
+
+
 
 
 
