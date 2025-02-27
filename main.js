@@ -18,7 +18,7 @@ function randomEmailDom() {
 
             listMail.forEach((mail) => {
 
-                const listMail = document.createElement('li')
+                const listMail = document.createElement('li.list-group-item')
                 listMail.textContent = mail
                 listEl.appendChild(listMail)
             })
